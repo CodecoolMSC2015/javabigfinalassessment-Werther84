@@ -2,7 +2,7 @@ package person;
 
 import java.util.List;
 
-public class Person extends Employee {
+public class Person {
 
 	private String name;
 	private String email;

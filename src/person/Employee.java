@@ -1,6 +1,6 @@
 package person;
 
-public class Employee {
+public class Employee extends Person {
 
 	private int salary;
 	private String jobTitle;
