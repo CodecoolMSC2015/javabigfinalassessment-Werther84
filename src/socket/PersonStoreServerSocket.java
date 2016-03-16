@@ -7,6 +7,9 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Set;
+
+import person.Person;
 
 public class PersonStoreServerSocket {
 
@@ -23,6 +26,14 @@ public class PersonStoreServerSocket {
 			ObjectInputStream ois = new ObjectInputStream(is);
 			ObjectOutputStream oos = new ObjectOutputStream(os);
 			
+			String keyword = (String) ois.readObject();
+			SearchType searchType = (SearchType) ois.readObject();
+			
+			CSVDataReader csvDataReader = new CSVDataReader(System.getProperty("user.dir")+"\\src\\socket\\persons.csv")
+			Set<Person> persons = csvDataReader.getPersons(keyword, searchType);
+			
+			oos.writeObject(persons);
+			
 			oos.close();
 			ois.close();
 			os.close();
@@ -31,6 +42,8 @@ public class PersonStoreServerSocket {
 			ss.close();
 			
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		
