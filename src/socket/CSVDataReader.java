@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import person.Person;
+import person.Skill;
 
 public class CSVDataReader extends DataReader {
 
@@ -36,10 +37,8 @@ public class CSVDataReader extends DataReader {
 					String oneToken = st.nextToken();
 					
 					if (st.countTokens() == 0 && !oneToken.equals(",")) {
-						System.out.println("Employed");
 						personData.add(oneToken);
 					} else if (previousWasComma && oneToken.equals(",")) {
-						System.out.println("No data");
 						personData.add("");
 					} else if (previousWasComma && !oneToken.equals(",")) {
 						System.out.println(oneToken);
@@ -56,7 +55,9 @@ public class CSVDataReader extends DataReader {
 				int i = 0;
 				for (Person onePerson : personList) {
 					if (onePerson.getName().equals(personData.get(0))) {
-						
+						List<Skill> currentSkill = personList.get(i).getSkillset();
+						//Skill newSkill = new Skill(personData.get(2), personData.get(3), (double) personData.get(4));
+						//currentSkill.add(newSkill);
 					}
 					i++;
 				}

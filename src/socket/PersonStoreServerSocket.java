@@ -29,7 +29,7 @@ public class PersonStoreServerSocket {
 			String keyword = (String) ois.readObject();
 			SearchType searchType = (SearchType) ois.readObject();
 			
-			CSVDataReader csvDataReader = new CSVDataReader(System.getProperty("user.dir")+"\\src\\socket\\persons.csv")
+			CSVDataReader csvDataReader = new CSVDataReader(System.getProperty("user.dir")+"\\src\\socket\\persons.csv");
 			Set<Person> persons = csvDataReader.getPersons(keyword, searchType);
 			
 			oos.writeObject(persons);
