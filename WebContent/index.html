@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+  <title>Search Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+<div class="search_box">
+<h1 class="top">Search in database</h1>
+<form autocomplete="off" action="SearchServlet" method="POST" enctype="application/x-www-form-urlencoded">
+  <table>
+    <tr>
+      <td class="field_name">Keyword:</td>
+      <td><input type="text" id="keyword" name="keyword" onfocus="change_color('keyword', '#F1F1F1');" onblur="change_color('keyword', '#E1E1E1');"></td>
+    </tr>
+    <tr>
+      <td class="search_type" colspan="2">Search type:</td>
+    </tr>
+    <tr>
+      <td>Mandatory:</td> 
+      <td><input style="width:20px" type="radio" name="searchtype" value="Mandatory" checked="checked"></td>
+      <td style="position: relative; left: -110px;">Optional:</td>
+      <td style="position: relative; left: -110px;"> <input style="width:20px" type="radio" name="searchtype" value="Optional"></td>
+    </tr>
+    <tr>
+      <td><input class="button" type="submit" value="Search">
+      </td>
+    </tr>
+  </table>
+</form>
+</div>
+</body>
+</html>

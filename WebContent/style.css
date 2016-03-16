@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+
+body {
+	background-image: url('business_concept.jpg');
+	background-color: lightblue;
+}
+
+div.search_box {
+	background-image: url("silver.png");
+	background-size: 100% auto;
+	background-position: center;
+	background-color: silver;
+	margin: 12% auto;
+	padding: 30px;
+	width: 40%;
+	min-width: 400px;
+	height: 150px;
+	box-shadow: 5px 5px darkgrey;
+	text-align: center;
+}
+
+h1 {
+	font-size: 30px;
+	color: yellow;
+}
+
+.top {
+	position: relative;
+	top: -10px;
+	margin: 0px;
+}
+
+.button {
+	width: 63px;
+}
+
+input {
+	position: left;
+	margin: 7px;
+	width: 160px;
+	background-color: #E2E2E2;
+}
+
+td {
+	text-align: left;
+}
+
+td.field_name {
+	text-align: right;
+	width: 40px;
+}
+td.search_type {
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+	color: yellow;
+}
+input.radio_button {
+	widht: 10px;
+	text-align: left;
+	position: left;
+}
